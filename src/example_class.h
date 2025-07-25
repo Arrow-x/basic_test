@@ -2,6 +2,7 @@
 
 #include "godot_cpp/classes/ref_counted.hpp"
 #include "godot_cpp/classes/wrapped.hpp"
+#include "godot_cpp/variant/array.hpp"
 #include "godot_cpp/variant/variant.hpp"
 
 using namespace godot;
@@ -17,4 +18,5 @@ public:
 	~ExampleClass() override = default;
 
 	void print_type(const Variant &p_variant) const;
+	void hello_something(const Array &ex_array) const;
 };
