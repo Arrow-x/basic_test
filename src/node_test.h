@@ -1,11 +1,8 @@
 #pragma once
 
-// #include "godot_cpp/core/object.hpp"
 #include "godot_cpp/classes/node.hpp"
 
-using namespace godot;
-
-class MySpecialNode : public Node {
+class MySpecialNode : public godot::Node {
 	GDCLASS(MySpecialNode, Node);
 
 public:

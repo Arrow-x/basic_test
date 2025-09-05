@@ -1,19 +1,22 @@
 #pragma once
 
-#include "godot_cpp/core/object.hpp"
+#include "godot_cpp/classes/node.hpp"
+#include "macros.h"
 
-using namespace godot;
+class Summator : public godot::Node {
+	GDCLASS(Summator, Node);
 
-class Summator : public Object {
-	GDCLASS(Summator, Object);
-	int count;
+	EXPORT_VAR(int, max_speed);
+	EXPORT_VAR(godot::String, char_name);
+	EXPORT_VAR(int, count);
+	EXPORT_VAR(float, my_angle);
 
 public:
+	Summator();
+	int get_total() const;
 	void add(int p_value);
 	void reset();
-	int get_total() const;
 	void say_hi() const;
-	Summator();
 
 protected:
 	static void _bind_methods();
@@ -22,5 +25,5 @@ protected:
 // this is just a test
 class RandClass {
 public:
-	String say_hi_there();
+	godot::String say_hi_there();
 };

@@ -1,5 +1,6 @@
 #include "node_test.h"
-#include "godot_cpp/core/print_string.hpp"
+
+using namespace godot;
 
 void MySpecialNode::_process(double p_delta) {
 	print_line("hello");
