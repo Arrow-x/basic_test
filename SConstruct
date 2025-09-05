@@ -23,7 +23,7 @@ customs = [os.path.abspath(path) for path in customs]
 
 opts = Variables(customs, ARGUMENTS)
 opts.Update(localEnv)
-
+linker = "mold"
 Help(opts.GenerateHelpText(localEnv))
 
 env = localEnv.Clone()
@@ -38,6 +38,7 @@ Run the following command to download godot-cpp:
 env = SConscript("godot-cpp/SConstruct", {"env": env, "customs": customs})
 
 env.Append(CPPPATH=["src/"])
+
 sources = Glob("src/*.cpp")
 
 if env["target"] in ["editor", "template_debug"]:
