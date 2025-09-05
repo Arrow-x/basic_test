@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/home/arrow-x/Sources/godot_cpp/",
+    "command": "g++ -Igodot-cpp/gdextension -Igodot-cpp/include -Igodot-cpp/gen/include -c src/example_class.cpp -o build/my_class.o",
+    "file": "src/example_class.cpp"
+  }
+]
