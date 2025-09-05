@@ -6,3 +6,7 @@
 script = ExtResource("1_jdh55")
 
 [node name="Node3D" type="Node3D" parent="."]
+
+[node name="Summator" type="Summator" parent="Node3D"]
+max_speed = 0
+my_angle = 0.288476
