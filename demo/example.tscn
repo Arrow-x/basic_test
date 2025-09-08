@@ -1,12 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dh0oj81pufivs"]
-
-[ext_resource type="Script" uid="uid://rh3wex5oo8yu" path="res://example.gd" id="1_jdh55"]
+[gd_scene format=3 uid="uid://dh0oj81pufivs"]
 
 [node name="Node" type="Node3D"]
-script = ExtResource("1_jdh55")
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="Summator" type="Summator" parent="Node3D"]
-max_speed = 0
-my_angle = 0.288476
+[node name="MySpecialNode" type="MySpecialNode" parent="."]
+
+[node name="Summator" type="Summator" parent="."]

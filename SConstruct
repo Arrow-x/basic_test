@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import os
 import sys
 
@@ -20,11 +21,12 @@ localEnv = Environment(tools=["default"], PLATFORM="")
 
 customs = ["custom.py"]
 customs = [os.path.abspath(path) for path in customs]
-
 opts = Variables(customs, ARGUMENTS)
+
 opts.Update(localEnv)
-linker = "mold"
 Help(opts.GenerateHelpText(localEnv))
+
+
 
 env = localEnv.Clone()
 

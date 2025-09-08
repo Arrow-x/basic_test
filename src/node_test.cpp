@@ -2,8 +2,16 @@
 
 using namespace godot;
 
-void MySpecialNode::_process(double p_delta) {
-	print_line("hello");
+MySpecialNode::MySpecialNode() {
+	// print_line("constructed MySpecialNode");
+	std::cout << "constructed me MySpecialNode\n";
+}
+void MySpecialNode::_ready() {
+	std::cout << "MySpecialNode is ready\n";
+	std::cout << "soemthinkg";
+
+
+
 }
 
 void MySpecialNode::_bind_methods() {

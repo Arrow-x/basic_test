@@ -6,7 +6,8 @@ class MySpecialNode : public godot::Node {
 	GDCLASS(MySpecialNode, Node);
 
 public:
-	virtual void _process(double p_delta) override;
+	MySpecialNode();
+	void _ready() override;
 
 protected:
 	static void _bind_methods();

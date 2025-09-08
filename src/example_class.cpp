@@ -1,4 +1,5 @@
 #include "example_class.h"
+#include "godot_cpp/variant/array.hpp"
 #include "gutils.hpp"
 #include "summator.h"
 
@@ -11,25 +12,21 @@ void ExampleClass::hello_something(const Array &ex_array) const {
 	if (!ex_array.is_empty()) {
 		print_line_rich(ex_array.back());
 	} else {
-		Summator *s = memnew(Summator);
+		print_line("how it's going dudes lol");
+		Summator *summonator_instance = memnew(Summator);
+
 		Node *root = gutils::get_scene_root();
 		if (root) {
-			root->add_child(s);
+			root->add_child(summonator_instance);
 		}
-
-		s->add(3);
-		s->add(8);
-		s->add(4);
-		RandClass *c = memnew(RandClass);
-		print_line(c->say_hi_there());
-
-		print_line("this array is empty");
-		print_line(s->get_total());
-		memfree(c);
+		summonator_instance->add(3);
+		summonator_instance->add(8);
+		summonator_instance->add(4);
+		
+		
+		print_line(summonator_instance->get_total());
 	}
 }
 
 void ExampleClass::_bind_methods() {
-	ClassDB::bind_method(D_METHOD("print_type", "variant"), &ExampleClass::print_type);
-	ClassDB::bind_method(D_METHOD("hello_something", "array"), &ExampleClass::hello_something);
 }

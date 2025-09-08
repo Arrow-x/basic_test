@@ -1,0 +1,7 @@
+cmake -S . -B build -G Ninja \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_TOOLCHAIN_FILE=toolchain-linux.cmake
+
+to allow attaching to process run this:
+
+echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope

@@ -5,7 +5,7 @@
 
 namespace gutils {
 inline godot::Node *get_scene_root() {
-	auto scene_tree = godot::Object::cast_to<godot::SceneTree>(
+	godot::SceneTree *scene_tree = godot::Object::cast_to<godot::SceneTree>(
 			godot::Engine::get_singleton()->get_main_loop());
 	if (!scene_tree) {
 		return nullptr;
