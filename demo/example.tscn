@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh0oj81pufivs"]
+
+[sub_resource type="TestResource" id="TestResource_6gkck"]
+
+[node name="Node" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Summator" type="Summator" parent="."]
+test_resource = SubResource("TestResource_6gkck")
+
+[node name="MySpecialNode" type="MySpecialNode" parent="Summator"]
+
+[node name="example_node" type="AnimatedSprite2D" parent="Summator/MySpecialNode"]
